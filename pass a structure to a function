@@ -1,0 +1,17 @@
+#include <stdio.h>
+struct Student 
+{
+    char name[50];
+    int age;
+    float marks;
+};
+void display(struct Student s) 
+{
+    printf("Name: %s, Age: %d, Marks: %.2f\n", s.name, s.age, s.marks);
+}
+int main() 
+{
+    struct Student s = {"Alice", 19, 90.0};
+    display(s);
+    return 0;
+}
