@@ -1,0 +1,16 @@
+#include <stdio.h>
+struct Student 
+{
+    char name[50];
+    int age;
+    float marks;
+};
+int main() 
+{
+    struct Student s1 = {"Alice", 19, 90.0};
+    struct Student s2;
+    s2 = s1;
+    printf("Copied Student Details:\n");
+    printf("Name: %s, Age: %d, Marks: %.2f\n", s2.name, s2.age, s2.marks);
+    return 0;
+}
