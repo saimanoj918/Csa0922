@@ -1,0 +1,14 @@
+#include<stdio.h>
+struct student
+{
+    char name[50];
+    int age;
+    float marks;
+};
+int main()
+{
+    struct student s={"Manoj",18,99.99};
+    struct student *ptr=&s;
+    printf("Name:%s,Age:%d,Marks:%f",ptr->name,ptr->age,ptr->marks);
+    return 0;
+}
