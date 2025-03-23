@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <string.h>
+struct Student 
+{
+    char name[50];
+    int marks;
+};
+int main() 
+{
+    struct Student students[2] = {{"Alice", 90}, {"Bob", 85}};
+    if (students[0].marks < students[1].marks) 
+    {
+        struct Student temp = students[0];
+        students[0] = students[1];
+        students[1] = temp;
+    }
+
+    printf("Sorted Order: %s %d, %s %d\n", students[0].name, students[0].marks, students[1].name, students[1].marks);
+    return 0;
+}
