@@ -1,0 +1,13 @@
+#include<stdio.h>
+int main()
+{
+    int a=12,b=18,temp;
+    while(b!=0)
+    {
+        temp=b;
+        b=a%b;
+        a=temp;
+    }
+    printf("HCF:%d",temp);
+    return 0;
+}
